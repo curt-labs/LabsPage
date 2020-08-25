@@ -1,0 +1,25 @@
+﻿.left, .right{
+    width: 45%;
+    padding:1%;
+    float:left;
+}
+                    
+.left{ border-right: 1px solid #e6e6e6; }
+                    
+.left h3, .right h3{
+    color: #e64d2d;
+}
+
+.left h3 span, .right h3 span{
+    text-decoration: underline;
+}
+
+.left h3 span.deprecated, .right h3 span.deprecated{
+    color: #cc0000;
+    text-decoration: none;
+}
+
+.left h3 span.announce, .right h3 span.announce{
+    color: #00CC33;
+    text-decoration: none;
+}

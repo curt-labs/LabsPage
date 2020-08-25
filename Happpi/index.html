@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from labs.curtmfg.com/Happpi/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Aug 2020 19:13:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<title>CURT Labs - Index</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<link href="../Content/main.css" rel="stylesheet" type="text/css" />
+<link href="../Content/css/documentation.css" rel="stylesheet" type="text/css" />
+<link href="../Content/css/admin.css" rel="stylesheet" type="text/css" />
+<link href="../Content/css/demo_table_jui.css" rel="stylesheet" type="text/css" />
+<link href="../Content/css/jquery-ui.css" rel="stylesheet" type="text/css" />
+<script src="../Scripts/jquery.validate.min.js" type="text/javascript"></script>
+<script src="../Scripts/jquery-ui.min.js" type="text/javascript"></script>
+<script src="../Scripts/jquery.dataTables.min.js" type="text/javascript"></script>
+<script src="../Scripts/jquery.dataTables.datesort.js" type="text/javascript"></script>
+<script src="../Scripts/admin/search.js" type="text/javascript"></script>
+<script src="../Scripts/modernizr-2.5.3.js" type="text/javascript"></script>
+</head>
+<body>
+<header>
+<a href="../index.html" title="CURT Manufacturing eCommerce" id="logo">
+<img src="../Content/img/logo.png" alt="CURT Manufacturing" />
+<span>eCommerce Solutions</span>
+</a>
+<div style="clear:both"></div>
+</header>
+<div id="usersNav">
+<ul>
+<li><a href="../index.html">Home</a></li>
+<li><a href="../hitch_widget.html">Widget</a></li>
+<li><a href="../Profile/Tools.html">Tools</a></li>
+</ul>
+</div>
+<script type="text/javascript" src="../Scripts/shCore.js"></script>
+<script type="text/javascript" src="../Scripts/shBrushPhp.js"></script>
+<link type="text/css" rel="stylesheet" href="../Content/css/shCoreDefault.css" />
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<section>
+<h1><img src="../Content/img/happpi/Happpi.png" alt="Happpi PHP Library" /></h1>
+</section>
+<ul id="subNav">
+<li><a href="index.html" class="active">Introduction</a></li>
+<li><a href="documentation.html">Documentation</a></li>
+</ul>
+<section style="font-family:Verdana; font-size:14px;">
+<h2>Introduction</h2>
+<p>
+<strong>Happpi</strong> is a <strong>PHP Library</strong> for developers that makes it easier to interact with the <strong>CURT API</strong>.
+Happpi takes the Object Oriented approach to PHP and takes the API responses and converts them to PHP Objects.
+</p>
+<p>
+<strong>For Example:</strong> With Happpi you can retrieve <strong>all Parent Categories</strong> like so:
+<br />
+<div class="CodeExample">
+<pre class="brush: php;">&lt;?php
+require_once(&#39;libraries/happpi/LoadAll.php&#39;); // points to the LoadAll.php file for loading the library.
+ 
+// once the library is required, you can now use one of the main &quot;interaction&quot; classes.
+// These interaction classes contain methods that get information from our REST API and
+// converts them to PHP objects for you to use.
+$category = new CurtCategory(); // create new category object to use category&#39;s functions.
+ 
+$MainCategories = $category-&gt;getParentCategories(); // call getParentCategories which returns a list of categories.
+ 
+echo &quot;&lt;h2&gt;Main Categories&lt;/h2&gt;&quot;;
+foreach($MainCategories as $category){ // step through the list of categories
+	echo $category-&gt;getCatTitle(); // print the title of each category.
+	echo &quot;&lt;br /&gt;&quot;;
+}
+?
+        </pre>
+</div>
+</p>
+<h3>To Install</h3>
+<p>
+Required Checklist:
+<ol>
+<li><a href="http://curl.haxx.se/dlwiz/">cURL</a> needs to be installed on the web server</li>
+<li>You must open your php.ini file and make sure the DLL for cURL is not commented out with a semi-colon.</li>
+<li><a href="https://github.com/curt-labs/CURT-Happpi">Happpi Library Files</a> need to be included into your project(s) directory(<a href="../Content/img/happpi/HapppiFolderStructure.png">example</a>)</li>
+</ol>
+Once you have everything installed you need to require_once the LoadAll.php file located inside the Happpi directory.
+<br />
+<br />
+<strong>Example</strong>:
+<br />
+<br />
+<div class="CodeExample">
+<pre class="brush: php;">&lt;?php
+require_once(&#39;libraries/happpi/LoadAll.php&#39;); // points to the LoadAll.php file for loading the library.
+ 
+?&gt;
+&lt;!doctype html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+ 
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;h1&gt;Your PHP Website.&lt;/h1&gt;
+ 
+		&lt;?php
+ 
+		// once the library is required, you can now use one of the main &quot;interaction&quot; classes.
+		// These interaction classes contain methods that get information from our REST API and
+		// converts them to PHP objects for you to use.
+		$category = new CurtCategory(); // create new category object to use category&#39;s functions.
+ 
+		$MainCategories = $category-&gt;getParentCategories(); // call getParentCategories which returns a list of categories.
+ 
+		echo &quot;&lt;h2&gt;Main Categories&lt;/h2&gt;&quot;;
+		foreach($MainCategories as $category){ // step through the list of categories
+			echo $category-&gt;getCatTitle(); // print the title of each category.
+			echo &quot;&lt;br /&gt;&quot;;
+		}
+ 
+		?&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+</div>
+</p>
+</section>
+<footer>
+<span>Copyright &copy; 2020 CURT Manufacturing, LLC</span>
+</footer>
+</body>
+
+<!-- Mirrored from labs.curtmfg.com/Happpi/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Aug 2020 19:13:14 GMT -->
+</html>

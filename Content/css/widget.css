@@ -1,0 +1,46 @@
+﻿.col{
+    width: 27%;
+    padding-left: 3%;
+    padding-right: 3%;
+    float:left;
+    border-right: 1px solid #e6e6e6;
+}
+                    
+.col h4{
+    color: #e64d2d;
+}
+.col h4 span {
+    text-decoration: underline;
+}
+                    
+.col h4 span.deprecated {
+	text-decoration: none;
+	color: red;
+}
+					
+.col:nth-child(3n){
+    border-right: none;
+}
+                    
+.col p.desc{
+    display:block;
+    height: 150px;
+}
+                    
+.col .param{
+    display: block;
+    font-size: 14px;
+    text-decoration: underline;
+    margin-top: 15px;
+}
+                    
+.col .name{
+    display:block;
+    font-weight: bold;
+    font-size: 12px;
+}
+                    
+.col .val{
+    display: block;
+    font-size: 12px;
+}

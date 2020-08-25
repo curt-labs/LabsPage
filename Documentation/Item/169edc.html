@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from labs.curtmfg.com/Documentation/Item/16?cat_id=8 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Aug 2020 19:17:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8" />
+<title>CURT Labs - Item</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<link href="../../Content/main.css" rel="stylesheet" type="text/css" />
+<link href="../../Content/css/documentation.css" rel="stylesheet" type="text/css" />
+<link href="../../Content/css/admin.css" rel="stylesheet" type="text/css" />
+<link href="../../Content/css/demo_table_jui.css" rel="stylesheet" type="text/css" />
+<link href="../../Content/css/documentation.css" rel="stylesheet" type="text/css" />
+<link href="../../Content/css/jquery-ui.css" rel="stylesheet" type="text/css" />
+<script src="../../Scripts/jquery.validate.min.js" type="text/javascript"></script>
+<script src="../../Scripts/jquery-ui.min.js" type="text/javascript"></script>
+<script src="../../Scripts/jquery.dataTables.min.js" type="text/javascript"></script>
+<script src="../../Scripts/jquery.dataTables.datesort.js" type="text/javascript"></script>
+<script src="../../Scripts/admin/search.js" type="text/javascript"></script>
+<script src="../../Scripts/modernizr-2.5.3.js" type="text/javascript"></script>
+<script src="../../Scripts/admin/validate.js" type="text/javascript"></script>
+</head>
+<body>
+<header>
+<a href="../../index.html" title="CURT Manufacturing eCommerce" id="logo">
+<img src="../../Content/img/logo.png" alt="CURT Manufacturing" />
+<span>eCommerce Solutions</span>
+</a>
+<div style="clear:both"></div>
+</header>
+<div id="usersNav">
+<ul>
+<li><a href="../../index.html">Home</a></li>
+<li><a href="../../hitch_widget.html">Widget</a></li>
+<li><a href="../../Profile/Tools.html">Tools</a></li>
+</ul>
+</div>
+<ul id="subNav">
+<li>
+<a href="../Categorydc5a.html?cat_id=3" class=active>API</a>
+</li>
+<li>
+<a href="../Categoryb0f3.html?cat_id=2">HitchWidget</a>
+</li>
+
+</ul>
+<ul id="subSubNav">
+<li>
+<a href="../Category040b.html?cat_id=4">API v1.0</a>
+</li>
+<li>
+<a href="../Category9edc.html?cat_id=8" class=active>API v2.0</a>
+</li>
+</ul>
+<section>
+<div id="content_container">
+<span style="float:right;font-size: 8pt">Last Modified: 3/21/2012 9:58:47 AM</span>
+<h2>Get Year</h2>
+<p>This will return a list of all the vehicle years in XML, JSON, or JSONP format. Format can be determined by assigning dataType to one of these formats.</p>
+<h4>Execution Example</h4>
+<p><a href="http://api.curtmfg.com/V2/GetYear" target="_blank">http://api.curtmfg.com/V2/GetYear</a></p>
+<h4>Result Example</h4>
+<p><a href="../../Content/APIDocs/Get%20Year/GetYear.html" target="_blank" title="Get Year XML Example">XML Example</a> | <a href="../../Content/APIDocs/Get%20Year/GetYear-2.html" target="_blank" title="Get Year JSON Example">JSON Example</a></p>
+<h4>Comments</h4>
+<p>No Comments for this item.</p>
+<div id="newComment" style="display:none">
+<span>Enter comment text</span>
+<textarea rows="3" cols="50" id="newComment_text"></textarea>
+</div>
+
+<em>You must be signed in to make a comment.</em>
+<button id="saveComment" style="display:none">Save Comment</button>
+<input type="hidden" name="itemID" id="itemID" value="16" />
+</div>
+</section>
+<script type="text/javascript">
+    var reply_html = '<div class="replyComment" style="display:none"><span>Enter comment text</span><textarea rows="3" cols="50" class="replyComment_text"></textarea></div><button class="saveReply" id="0">Save Comment</button>';
+
+    $(document).ready(function () {
+        $('#doc_table').dataTable();
+        $('#doc_table').css('width', '100%');
+
+        $('#addComment').click(function () {
+            $('#newComment').slideDown();
+            $('#newComment_text').focus();
+            $(this).fadeOut();
+            $('#saveComment').fadeIn();
+        });
+
+        $('#saveComment').click(function () {
+            var itemID = $('#itemID').val();
+            var comment = $('#newComment_text').val();
+            saveComment(itemID, comment, 0);
+        });
+
+        $('.saveReply').live('click', function () {
+            var itemID = $('#itemID').val();
+            var comment = $(this).parent().find('.replyComment_text').val();
+            var parentComment = $(this).attr('id');
+            saveComment(itemID, comment, parentComment);
+        });
+
+        $('.comment_reply').live('click', function () {
+            var parentComment = $(this).attr('id');
+
+            var comment_html = reply_html;
+            if ($(this).parent().find('.replyComment').get() > 0) {
+                $(this).parent().find('.replyComment:last').after(comment_html);
+                $('.saveReply').attr('id', parentComment);
+            } else {
+                $(this).parent().after(comment_html);
+                $('.saveReply').attr('id', parentComment);
+            }
+            $('.replyComment').slideDown();
+            $('.replyComment_text').focus();
+        });
+
+    });
+
+    function saveComment(itemID, comment, replyTo) {
+        // Send ajax request
+        $.getJSON('/Documentation/AddComment', { 'item_id': itemID, 'comment': encodeURIComponent(comment), 'replyTo': replyTo }, function (data) {
+            if (data.error == '') {
+
+                var admin = (data.isAdmin == 1) ? ' - Administrator' : '';
+                if (replyTo == 0) {
+                    var html = '<div class="comment">';
+                    html += '<span class="name">' + data.fname + ' ' + data.lname + admin + '</span>';
+                    html += '<a href="javascript:void(0)" class="comment_reply" id="' + data.commentID + '">Reply</a><br />';
+                    html += '<div class="comment_text"><span>' + comment + '</span></div>';
+                    html += '</div>';
+                    if ($('.comment').get() > 0) {
+                        $('.comment:last').after(html);
+                    } else {
+                        $('#newComment').before(html);
+                    }
+                    resetComment();
+                } else {
+                    var html = '<div class="comment" style="margin-left: 2%">';
+                    html += '<span class="name">' + data.fname + ' ' + data.lname + admin + '</span>';
+                    html += '<a href="javascript:void(0)" class="comment_reply" id="' + data.commentID + '">Reply</a><br />';
+                    html += '<div class="comment_text"><span>' + comment + '</span></div>';
+                    html += '</div>';
+                    $('#' + replyTo).parent().after(html);
+                    resetReply();
+                }
+                $('.replyComment').remove();
+            } else {
+                alert('There was error while submitting your comment.');
+            }
+        });
+    }
+
+    function resetComment() {
+        $('#newComment').slideUp();
+        $('#newComment_text').val('');
+        $('#addComment').show();
+        $('#saveComment').hide();
+    }
+
+    function resetReply() {
+        $('.saveReply').hide();
+        $('.replyComment').slideUp();
+        $('.replyComment_text').val('');
+        $('.saveReply').attr('id', '0');
+    }
+</script>
+<footer>
+<span>Copyright &copy; 2020 CURT Manufacturing, LLC</span>
+</footer>
+</body>
+
+<!-- Mirrored from labs.curtmfg.com/Documentation/Item/16?cat_id=8 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Aug 2020 19:17:03 GMT -->
+</html>
