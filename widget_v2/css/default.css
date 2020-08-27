@@ -1,0 +1,498 @@
+/* 
+    Document   : configurator
+    Created on : Oct 14, 2010, 11:57:53 AM
+    Author     : Aninneman
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+
+img{
+    border: none;
+}
+
+#configurator{
+    color: #5b5a5a;
+    font-family: Times New Roman;
+    font-size: 10pt;
+}
+
+select{
+    background-color: #515050;
+    color: white;
+    border-radius: 4px 4px;
+    -moz-border-radius: 4px 4px;
+    -o-border-radius: 4px 4px;
+    height: 25px;
+    min-width:200px;
+}
+
+option{
+    padding: 1em;
+    color: white;
+}
+
+option:last{
+    border-radius: 0px 0px 4px 4px;
+    -moz-border-radius: 0px 0px 4px 4px;
+    -o-border-radius: 0px 0px 4px 4px;
+}
+
+#clear{
+    font-size: 10pt;
+    color: #5b5a5a;
+    text-decoration: none;
+}
+
+#clear:hover{
+    text-decoration: underline;
+}
+
+#vehicleStr{
+    margin: 10px;
+    font-size: 16pt;
+    float:left;
+}
+
+#searchStr{
+    display: none;
+}
+
+select{
+    display:none;
+}
+
+#lookup_submit{
+    display: none;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.hitch{
+    padding-bottom:25px;
+    border-bottom: 1px solid black;
+}
+
+#logo{
+    float:right;
+    width: 150px;
+    height: 90%;
+}
+
+#logo img{
+    width: 150px;
+    height: 40px;
+    margin: 5px 0px;
+}
+
+.curtLogo{
+    display:inline;
+    position: relative;
+    top: 2px;
+}
+
+.shortDesc_link{
+    text-decoration: none;
+    color: #515050;
+    margin-bottom: 5px;
+}
+
+.shortDesc_link:hover{
+    text-decoration: underline;
+}
+
+.hitchTitle{
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+.prodImg{
+    float:left;
+    width:10%;
+    margin-right:25px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.prodImg img{
+    width:95%;
+}
+
+.prodImg span{
+    display:block;
+    color: black;
+    font-weight: bold;
+    font-size: 10pt;
+    text-decoration: none;
+}
+
+.prodImg span:hover{
+    text-decoration: underline;
+}
+
+.longDesc{
+    float:left;
+    width:60%;
+    margin-top:0px;
+    margin-right:20px;
+}
+
+.longDesc p{
+    margin-bottom: 0px;
+}
+
+.prodLinks{
+    min-height: 45px;
+    float:left;
+    width:20%;
+    border-left:1px solid #ccc;
+    padding-left:15px;
+}
+
+.prodLinks a{
+    vertical-align: top;
+    color: #515050;
+    text-decoration: none;
+    margin-right: 5px;
+    font-weight: bold;
+    font-size: 14pt;
+}
+
+.prodLinks a img{
+    vertical-align: bottom;
+    text-decoration: none;
+}
+
+.prodLinks a span:hover{
+    text-decoration: underline;
+}
+
+#resultBox_outline{
+    border: 1px solid #999;
+    border-radius: 10px 10px;
+    -moz-border-radius: 10px 10px;
+    -o-border-radius: 10px 10px;
+    margin: 10px 0px;
+}
+
+#resultBox{
+    background: #999;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#999), to(#ccc));
+    background: -moz-linear-gradient(top, #999, #ccc);
+    /* For Internet Explorer 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#999999, endColorstr=#CCCCCC);
+    /* For Internet Explorer 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#999999, endColorstr=#CCCCCC)";
+    padding: 5px;
+    border: 1px solid #white;
+    border-radius: 10px 10px;
+    -moz-border-radius: 10px 10px;
+    -o-border-radius: 10px 10px;
+    color: white;
+    min-height: 60px;
+    max-height: 150px;
+}
+
+.trademark{
+    vertical-align: top;
+    line-height: 1.5em;
+    color: #e44f31;
+}
+
+.button{
+    background: #999;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#999), to(#ccc));
+    background: -moz-linear-gradient(top, #999, #ccc);
+    /* For Internet Explorer 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#999999, endColorstr=#CCCCCC);
+    /* For Internet Explorer 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#999999, endColorstr=#CCCCCC)";
+    
+    padding: 5px;
+    border: 1px solid #white;
+    border-radius: 10px 10px;
+    -moz-border-radius: 10px 10px;
+    -o-border-radius: 10px 10px;
+    color: white;
+}
+
+.button:hover{
+    text-decoration: underline;
+}
+
+.button_outer{
+    border: 1px solid #999;
+    border-radius: 10px 10px;
+    -moz-border-radius: 10px 10px;
+    -o-border-radius: 10px 10px;
+    margin: 5px 0px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.buynow{
+    width: 40%;
+}
+
+.more{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 12pt;
+}
+
+.more:hover{
+    text-decoration: underline;
+}
+
+/******* Styling for the pop-up with hitch specific details ****/
+
+.hitchDetails{
+    background-color: white;
+    height: 100%;
+    width: 100%;
+}
+
+.title{
+    font-size: 16pt;
+    font-weight: bold;
+    display: block;
+    width: 98%;
+    border-bottom: 1px solid #ccc;
+    margin:auto;
+    margin-top: 15px;
+}
+
+.close{
+    float: right;
+    position: relative;
+    top: -35px;
+    margin-right: 15px;
+}
+
+.close img{
+    width: 30px;
+    cursor: pointer;
+}
+
+#imageContainer{
+    width: 25%;
+    height: 260px;
+    margin-left: 15px;
+    margin-top: 15px;
+    text-align:center;
+    float:left;
+}
+
+#mainImage{
+    border: 3px solid black;
+    border-radius: 5px 5px;
+    -moz-border-radius: 5px 5px;
+    -o-border-radius: 5px 5px;
+    box-shadow: 3px 3px 3px #999;
+    -webkit-box-shadow: 3px 3px 3px #999;
+    -moz-box-shadow: 3px 3px 3px #999;
+    -o-box-shadow: 3px 3px 3px #999;
+    height: 205px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+#mainImage img{
+    height: 95%;
+    width: 95%;
+}
+
+.mini{
+    width: 55px;
+    height: 55px;
+    margin-right: 4px;
+    border: 2px solid black;
+    border-radius: 5px 5px;
+    -moz-border-radius: 5px 5px;
+    -o-border-radius: 5px 5px;
+    box-shadow: 3px 3px 3px #999;
+    -webkit-box-shadow: 3px 3px 3px #999;
+    -moz-box-shadow: 3px 3px 3px #999;
+    -o-box-shadow: 3px 3px 3px #999;
+    cursor: pointer;
+}
+
+.detailsLongDesc{
+    float:left;
+    width: 70%;
+    margin-left: 25px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    position: relative;
+    top: -18px;
+}
+
+.prodDetails{
+    float:left;
+    width: 70%;
+    margin-left: 25px;
+    border-collapse: collapse;
+}
+
+.prodDetails table{
+    border-collapse: collapse;
+    width: 100% !important;
+}
+
+.prodDetails table td{
+    border: 2px solid black;
+    margin-bottom: 2px;
+}
+
+.prodDetails table .label{
+    width: 25%;
+    background-color: #ccc;
+    font-weight: bold;
+    padding-left: 10px;
+    height: 30px;
+    border-right: none;
+}
+
+.prodDetails table .val{
+    padding-left: 10px;
+    border-left: none;
+}
+
+.prodDetails table tr .noteHeader{
+    text-align: center;
+    border: 2px solid black;
+}
+
+.prodDetails table tr .notes{
+    border: 2px solid black;
+}
+
+.prodDetails .disclaimer{
+    margin-top: 5px;
+}
+
+.installSheet{
+    color: black;
+    text-decoration: none;
+}
+
+.installSheet span:hover{
+    text-decoration: underline;
+}
+
+.installSheet img{
+    vertical-align: bottom;
+}
+
+#facebox .body{
+    border: 4px solid black;
+}
+
+.hold {
+	width: 1px;
+	height: 22px;
+	float: left;
+}
+
+#facebox .b {
+  /*background:url(/api_dev/facebox/b.png);*/
+}
+
+#facebox .tl {
+  /*background:url(/api_dev/facebox/tl.png) no-repeat;*/
+}
+
+#facebox .tr {
+  /*background:url(/api_dev/facebox/tr.png) no-repeat;*/
+}
+
+#facebox .bl {
+  /*background:url(/api_dev/facebox/bl.png) no-repeat;*/
+}
+
+#facebox .br {
+  /*background:url(/api_dev/facebox/br.png) no-repeat;*/
+}
+
+#facebox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 500;
+  text-align: left;
+}
+
+#facebox .popup {
+  position: relative;
+}
+
+#facebox table {
+  border-collapse: collapse;
+  width: 1000px;
+}
+
+#facebox td {
+  border-bottom: 0;
+  padding: 0;
+}
+
+#facebox .body {
+  padding: 10px;
+  background: #fff;
+  width: 370px;
+}
+
+#facebox .loading {
+  text-align: center;
+}
+
+#facebox .image {
+  text-align: center;
+}
+
+#facebox .close_image {
+  border: 0;
+  margin: 0;
+}
+
+#facebox .footer {
+  border-top: 1px solid #DDDDDD;
+  padding-top: 5px;
+  margin-top: 10px;
+  text-align: right;
+}
+
+#facebox .tl, #facebox .tr, #facebox .bl, #facebox .br {
+  height: 10px;
+  width: 10px;
+  overflow: hidden;
+  padding: 0;
+}
+
+#facebox_overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height:100%;
+  width:100%;
+}
+
+.facebox_hide {
+  z-index:-100;
+}
+
+.facebox_overlayBG {
+  background-color: #000;
+  z-index: 99;
+}
+
+* html #facebox_overlay { /* ie6 hack */
+  position: absolute;
+  height: expression(document.body.scrollHeight > document.body.offsetHeight ? document.body.scrollHeight : document.body.offsetHeight + 'px');
+}

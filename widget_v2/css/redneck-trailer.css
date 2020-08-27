@@ -1,0 +1,581 @@
+/* 
+ Document   : configurator
+ Created on : Oct 14, 2010, 11:57:53 AM
+ Author     : Aninneman
+ Description:
+ Purpose of the stylesheet follows.
+ */
+
+#configurator img{
+    border: none;
+}
+
+#configurator{
+    color: #5b5a5a;
+    font-family: "Ubuntu",arial,serif;
+    font-size: 10pt;
+    text-align: left;
+}
+
+#configurator option{
+    color: #343434;
+}
+
+#configurator option:last{
+    border-radius: 0px 0px 4px 4px;
+    -moz-border-radius: 0px 0px 4px 4px;
+    -o-border-radius: 0px 0px 4px 4px;
+}
+
+#configurator .prodLinks input[type=image]{
+    width: 90%;
+}
+
+#configurator #clear{
+    font-size: 10pt;
+    color: #5b5a5a;
+    text-decoration: none;
+}
+
+#configurator #clear:hover{
+    text-decoration: underline;
+}
+
+#configurator #vehicleStr{
+    margin: 10px;
+    font-size: 16pt;
+    float:left;
+}
+
+#configurator #searchStr{
+    display: none;
+}
+
+
+
+#configurator select{
+    display:none;
+    border: 2px solid #343434;
+    padding: 2px 3px 3px 5px;
+    margin: 0;
+    font: inherit;
+    outline: none;
+    line-height: 1.2em;
+    background: #f8f8f8;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    color: black;
+    height: 25px;
+    min-width:200px;
+}
+
+
+
+/* Since we removed the default focus styles, we have to add our own */
+#configurator select:focus {
+    -webkit-box-shadow: 0 0 3px 1px #c00;
+    -moz-box-shadow: 0 0 3px 1px #c00;
+    box-shadow: 0 0 3px 1px #c00;
+}
+
+#configurator #lookup_submit{
+    display: none;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+#configurator .hitch{
+    padding-bottom:25px;
+    padding-left: 20px;
+    border-bottom: 1px solid black;
+}
+
+#configurator #logo{
+    float:right;
+    width: 150px;
+}
+
+#configurator #logo img{
+    width: 150px;
+    height: 40px;
+    margin: 5px 0px;
+}
+
+#configurator .curtLogo{
+    display:inline;
+    position: relative;
+    top: 2px;
+    width:120px;
+}
+
+#configurator .shortDesc_link{
+    text-decoration: none;
+    color: #515050;
+    margin-bottom: 5px;
+    padding-top: 10px;
+	height: 40px;
+}
+
+#configurator .hitchTitle{
+    font-size: 22pt;
+    font-weight: bold;
+	vertical-align:bottom;
+}
+
+#configurator .prodImg{
+    float:left;
+    width:30%;
+    margin-right:25px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#configurator .prodImg img{
+    width:95%;
+}
+
+#configurator .prodImg span{
+    display:block;
+    color: black;
+    font-weight: bold;
+    font-size: 10pt;
+    text-decoration: none;
+}
+
+#configurator .prodImg span:hover{
+    text-decoration: underline;
+}
+
+#configurator .longDesc{
+    float:left;
+    width: 60%;
+    margin-top:0px;
+    margin-right:20px;
+}
+
+#configurator .longDesc .hitchSpecs{
+    float:left;
+    margin-right: 25px;
+}
+
+#configurator .longDesc .hitchSpecs img{
+    width: 25px;
+    vertical-align: bottom;
+}
+
+#configurator .longDesc .hitchSpecs p{
+    
+}
+
+#configurator .longDesc .hitchSpecs a{
+    line-height: 25px;
+    color: #5b5a5a;
+    text-decoration: none;
+}
+
+#configurator .longDesc .hitchSpecs a:hover{
+    text-decoration: underline;
+}
+
+#configurator .longDesc .grossLoad{
+    float:right;
+    clear: right;
+    background: #2c2e2d;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0d0d0d), to(#2c2e2b));
+    background: -moz-linear-gradient(top, #0d0d0d, #2c2e2b);
+    
+    border: 2px outset #343434;
+    border-radius: 3px 3px 3px;
+    -webkit-box-shadow: 0 0 4px #343434;
+    max-width: 45%;
+}
+
+#configurator .longDesc .grossLoad table caption{
+    color: #e44f31;
+    font-weight: bold;
+    font-size: 15pt;
+}
+
+#configurator .longDesc .grossLoad table tr td:nth-child(even){
+    color: #e44f31;
+}
+
+#configurator .longDesc .grossLoad table tr td:nth-child(odd){
+    color: white;
+    font-weight: bold;
+}
+
+#configurator .attribute_table{
+    border-collapse: collapse;
+    margin: 10px 0px;
+}
+
+#configurator .attribute_table thead{
+    border: 2px solid #343434;
+    border-bottom:none;
+}
+
+#configurator .attribute_table thead th{
+    background: white;
+}
+
+#configurator .attribute_table tbody td{
+    border: 2px solid #343434;
+    padding:4px;
+}
+
+#configurator .attribute_table tbody td:first-child{
+    background: white;
+    font-weight:bold;
+}
+
+#configurator .attribute_table tbody td:last-child{
+    background: #e6e6e6;
+}
+
+#configurator .longDesc p{
+    margin-bottom: 0px;
+    margin-top:3px;
+}
+
+#configurator .prodLinks{
+    min-height: 45px;
+    float:left;
+    width:20%;
+    border-left:1px solid #ccc;
+    padding-left:15px;
+    display: none;
+}
+
+#configurator .prodLinks a{
+    vertical-align: top;
+    color: #515050;
+    text-decoration: none;
+    margin-right: 5px;
+    font-weight: bold;
+    font-size: 14pt;
+}
+
+#configurator .prodLinks a img{
+    vertical-align: bottom;
+    text-decoration: none;
+}
+
+#configurator .prodLinks a span:hover{
+    text-decoration: underline;
+}
+
+#configurator #hitchResults ul.tabs{
+    list-style:none;
+    padding: 0;
+    margin:0;
+}
+
+#configurator #hitchResults ul.tabs li{
+    display:inline-block;
+    min-width: 100px;
+    margin-top:10px;
+    padding: 0px 10px;
+    margin-left:3px;
+    height: 30px;
+    line-height: 30px;
+    text-align:center;
+}
+
+#configurator #hitchResults ul.tabs li:first-child{
+    margin-left: 10px;
+}
+
+#configurator #hitchResults ul.tabs li a{
+    color: #343434;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight:bold;
+    display: inline-block;
+    height: 28px;
+    width: 100%;
+    border-radius: 5px 5px 0px 0px;
+    border: 2px outset #343434;
+    border-bottom: 0px;
+    background: white;
+}
+
+#configurator #hitchResults ul.tabs li a.active,#configurator #hitchResults ul.tabs li a:hover{
+    background: #8fb6d2; /* Old browsers */
+background: -moz-linear-gradient(top, #8fb6d2 0%, #b8cddc 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8fb6d2), color-stop(100%,#b8cddc)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #8fb6d2 0%,#b8cddc 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #8fb6d2 0%,#b8cddc 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #8fb6d2 0%,#b8cddc 100%); /* IE10+ */
+background: linear-gradient(top, #8fb6d2 0%,#b8cddc 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8fb6d2', endColorstr='#b8cddc',GradientType=0 ); /* IE6-9 */
+    
+    color: #343434;
+    
+    border-bottom: 0px;
+    height: 29px;
+}
+
+#configurator #resultBox{
+    background: #b8cddc; /* Old browsers */
+background: -moz-linear-gradient(top, #b8cddc 0%, #ffffff 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b8cddc), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #b8cddc 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #b8cddc 0%,#ffffff 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #b8cddc 0%,#ffffff 100%); /* IE10+ */
+background: linear-gradient(top, #b8cddc 0%,#ffffff 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b8cddc', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+    padding: 5px;
+    min-height: 60px;
+    max-height: 150px;
+}
+
+#configurator .trademark{
+    vertical-align: top;
+    line-height: 1.5em;
+    color: #e44f31;
+}
+
+#configurator .button{
+    background: #999;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#999), to(#ccc));
+    background: -moz-linear-gradient(top, #999, #ccc);
+    
+    padding: 5px;
+    border: 1px solid #white;
+    border-radius: 10px 10px;
+    -moz-border-radius: 10px 10px;
+    -o-border-radius: 10px 10px;
+    color: white;
+}
+
+#configurator .button:hover{
+    text-decoration: underline;
+}
+
+#configurator .button_outer{
+    border: 1px solid #999;
+    border-radius: 10px 10px;
+    -moz-border-radius: 10px 10px;
+    -o-border-radius: 10px 10px;
+    margin: 5px 0px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#configurator .buynow{
+    width: 40%;
+}
+
+#configurator .more{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 12pt;
+}
+
+#configurator .more:hover{
+    text-decoration: underline;
+}
+#configurator .hitchTabs{
+    margin-top: 20px;
+}
+
+#configurator .hitchTab{
+    width: 100px;
+    display: inline-block;
+    text-align:center;
+    height: 25px;
+    background:#dedede;
+    -webkit-box-shadow: 0 0 5px #ccc;
+    margin-right: 3px;
+    vertical-align: bottom;
+    border-top-left-radius: 5px 5px;
+    border-top-right-radius: 5px 5px;
+}
+
+#configurator .activeHitchTab{
+    background: #8fb6d2; /* Old browsers */
+background: -moz-linear-gradient(top, #8fb6d2 0%, #b8cddc 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8fb6d2), color-stop(100%,#b8cddc)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #8fb6d2 0%,#b8cddc 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #8fb6d2 0%,#b8cddc 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #8fb6d2 0%,#b8cddc 100%); /* IE10+ */
+background: linear-gradient(top, #8fb6d2 0%,#b8cddc 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8fb6d2', endColorstr='#b8cddc',GradientType=0 ); /* IE6-9 */
+
+    height: 30px;
+    -webkit-transition: height 0.3s ease-in;
+    -o-transition: height 0.3s ease-in;
+    -moz-transition: height 0.3s ease-in;
+    transition: height 0.3s ease-in;
+}
+
+#configurator .hitchTab a{
+    color: black;
+    vertical-align: middle;
+    font-size: 13pt;
+    text-decoration: none;
+    line-height: 25px;
+}
+
+#configurator .activeHitchTab a{
+    line-height: 30px !important;
+    -webkit-transition: line-height 0.3s ease-in;
+    -o-transition: line-height 0.3s ease-in;
+    -moz-transition: line-height 0.3s ease-in;
+    transition: line-height 0.3s ease-in;
+    color:white;
+}
+
+#configurator .hitchTab_container{
+    max-height: 400px;
+    border: 2px outset #343434;
+    width: 92%;
+}
+
+#configurator .hitchTab_container .wiringTab_content, .hitchTab_container .accTab_content, .hitchTab_container .imageTab_content{
+    display: none;
+    overflow: auto;
+    max-height: 400px;
+}
+
+#configurator .hitchTab_container .imageTab_content{
+    display: block;
+    padding-left: 15px;
+    text-align:center;
+}
+
+#configurator .hitchTab_container .imageTab_content img{
+    width: 20%;
+    border: 2px outset #343434;
+    -webkit-box-shadow: 0 0 3px #343434;
+    margin: 10px;
+    cursor: pointer;
+}
+
+/******* Styling for the pop-up with hitch specific details ****/
+
+#configurator .connector{
+    border-bottom: 1px solid #343434;
+}
+
+
+#configurator .accessory{
+    width: 100%;
+    border-bottom: 2px solid #343434;
+    clear:right;
+}
+
+#configurator .accessory .imgContainer{
+    float:left;
+    width: 35%;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+#configurator .accessory .imgContainer .imgBorder{
+    border: 2px solid #343434;
+    border-radius: 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px;
+    -o-border-radius: 5px 5px 5px;
+    
+    box-shadow: #999 2px 2px 2px;
+    -webkit-box-shadow: #999 2px 2px 2px;
+    -moz-box-shadow: #999 2px 2px 2px;
+    -o-box-shadow: #999 2px 2px 2px;
+    
+    height: 125px;
+    width: 80%;
+    padding: 5px;
+    overflow:hidden;
+    vertical-align: middle;
+    text-align: center;
+    background: white;
+    margin:auto;
+}
+
+#configurator .accessory .imgContainer .imgBorder img{
+    max-height: 125px;
+}
+
+#configurator .accessory .imgContainer .qtyBox, .wiringContainer .qtyBox{
+    width: 15px;
+    border: 1px solid #343434;
+    border-radius: 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px;
+    -o-border-radius: 3px 3px 3px;
+    height: 15px;
+    padding: 2px;
+    margin-top: 3px;
+    vertical-align: top;
+}
+
+#configurator .accessory .imgContainer .accPrice, .wiringContainer .accPrice{
+    margin-top: 15px;
+    margin-left: 5px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+#configurator .accessory .imgContainer .product .googlecart-add-button{
+    margin:auto;
+}
+
+#configurator .accessory .specs{
+    float: right;
+    padding-left: 35px;
+    width: 50%;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    background: white;
+}
+
+#configurator .accessory .specs .details{
+    width: 100%;
+    font-size: 11pt;
+    float:left;
+}
+
+#configurator .accessory .specs .details ul{
+    padding-left: 0px;
+    width: 45%;
+    max-height: 150px;
+    float:left;
+}
+
+#configurator .accessory .specs .buy{
+    width: 40%;
+    float:left;
+}
+
+#configurator .price{
+    font-size: 16pt;
+    color: #e44f31;
+    margin-right: 10px;
+    line-height: 25px;
+    vertical-align: top;
+}
+
+#configurator form label{
+    font-weight: bold;
+    line-height: 25px;
+}
+
+
+/****** AMENDED CHANGES *********/
+#configurator #widget_tab_container .widget_tab_content{
+    display: none;
+}
+
+#configurator #widget_tab_container{
+    border: 1px solid #0d0d0d;
+    -webkit-box-shadow: 10px 10px 10px #e64d2d;
+    -moz-box-shadow: 0 0 6px #2c2e2d;
+    -o-box-shadow: 0 0 6px #2c2e2d;
+    box-shadow: 0 0 6px #2c2e2d;
+    background: white;
+}

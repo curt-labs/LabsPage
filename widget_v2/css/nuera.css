@@ -1,0 +1,598 @@
+/* 
+ Document   : configurator
+ Created on : Oct 14, 2010, 11:57:53 AM
+ Author     : Aninneman 
+ Modified by: David Vaini
+ Description:
+ Purpose of the stylesheet follows.
+ */
+
+#configurator img{
+    border: none;
+}
+
+#configurator{
+    color: #5b5a5a;
+    font-family: arial,serif;
+    font-size: 10pt;
+    text-align: left;
+
+
+}
+
+
+#configurator .prodLinks input[type=image]{
+    width: 90%;
+}
+
+#configurator #clear{
+    font-size: 10pt;
+    color: #5b5a5a;
+    text-decoration: none;
+}
+
+#configurator #clear:hover{
+    text-decoration: underline;
+}
+
+#configurator #vehicleStr{
+    margin: 10px;
+    font-size: 18px;
+    float:left;
+    padding-bottom:4px;
+}
+
+#configurator #searchStr{
+    display: none;
+}
+
+
+
+#configurator select{
+
+}
+
+
+
+/* Since we removed the default focus styles, we have to add our own */
+#configurator #lookup_submit{
+    display: none;
+    padding-left: 3px;
+    padding-right: 3px;
+    width:150px;
+    height:25px;
+    font-size:14px;
+    color:#ffffff;
+}
+
+#configurator .hitch{
+    padding-bottom:25px;
+    padding-left: 20px;
+    padding-top:10px;
+    border-bottom: 1px solid black;
+}
+
+#configurator #logo{
+    float:right;
+    width: 150px;
+}
+
+#configurator #logo img{
+    width: 150px;
+    height: 40px;
+    margin: 5px 0px;
+}
+
+#configurator .curtLogo{
+    display:inline;
+    position: relative;
+    top: 2px;
+    width:120px;
+}
+
+#configurator .shortDesc_link{
+    text-decoration: none;
+    color: #515050;
+    margin-bottom: 5px;
+    padding-top: 10px;
+    height: 40px;
+}
+
+#configurator .hitchTitle{
+    font-size: 22pt;
+    font-weight: bold;
+    vertical-align:bottom;
+}
+
+#configurator .prodImg{
+    float:left;
+    width:30%;
+    margin-right:25px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#configurator .prodImg img{
+    width:95%;
+    border:1px solid #ddd;
+     box-shadow: #eeeeee 0px 0px 3px;
+    -webkit-box-shadow: #dddddd 0px 0px 10px;
+    -moz-box-shadow: #eeeeee 0px 0px 3px;
+    -o-box-shadow: #eeeeee 0px 0px 3px;
+}
+
+#configurator .prodImg span{
+    display:block;
+    color: black;
+    font-weight: bold;
+    font-size: 10pt;
+    text-decoration: none;
+}
+
+#configurator .prodImg span:hover{
+    text-decoration: underline;
+}
+
+#configurator .longDesc{
+    float:left;
+    width:40%;
+    margin-top:0px;
+    margin-right:20px;
+    border-right:2px dotted #cccccc
+}
+
+#configurator .longDesc .hitchSpecs{
+    float:left;
+    margin-right: 25px;
+}
+
+#configurator .longDesc .hitchSpecs img{
+    width: 25px;
+    vertical-align: bottom;
+}
+
+#configurator .longDesc .hitchSpecs p{
+    
+}
+
+#configurator .longDesc .hitchSpecs a{
+    line-height: 25px;
+    color: #5b5a5a;
+    text-decoration: none;
+}
+
+#configurator .longDesc .hitchSpecs a:hover{
+    text-decoration: underline;
+}
+
+#configurator .longDesc .grossLoad{
+    float:right;
+    clear: right;
+    background: #2c2e2d;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0d0d0d), to(#2c2e2b));
+    background: -moz-linear-gradient(top, #0d0d0d, #2c2e2b);
+    
+    border: 2px outset #343434;
+    border-radius: 3px 3px 3px;
+    -webkit-box-shadow: 0 0 4px #343434;
+    max-width: 45%;
+}
+
+#configurator .longDesc .grossLoad table caption{
+    color: #e44f31;
+    font-weight: bold;
+    font-size: 15pt;
+}
+
+#configurator .longDesc .grossLoad table tr td:nth-child(even){
+    color: #e44f31;
+}
+
+#configurator .longDesc .grossLoad table tr td:nth-child(odd){
+    color: white;
+    font-weight: bold;
+}
+
+#configurator .attribute_table{
+    border-collapse: collapse;
+}
+
+#configurator .attribute_table thead{
+    border: 2px solid #343434;
+    border-bottom:none;
+}
+
+#configurator .attribute_table thead th{
+    background: white;
+}
+
+#configurator .attribute_table tbody td{
+    border: 2px solid #343434;
+    padding:4px;
+}
+
+#configurator .attribute_table tbody td:first-child{
+    background: white;
+    font-weight:bold;
+}
+
+#configurator .attribute_table tbody td:last-child{
+    background: #eeeeee;
+}
+
+#configurator .longDesc p{
+    margin-bottom: 0px;
+    margin-top:3px;
+}
+
+#configurator .prodLinks{
+    min-height: 45px;
+    float:left;
+    font-size:22px;
+}
+
+#configurator .prodLinks img{
+    cursor:pointer;
+    float:right;
+}
+
+#configurator .prodLinks small{
+    color: #5B6268;
+    font-size: 16px;
+}
+
+#configurator .prodLinks input{
+    border: 1px solid #999;
+}
+
+#configurator .prodLinks input#quantity{
+    padding: 3px;
+    text-align:center;
+    width: 30px;
+    margin-left: 5px;   
+}
+
+#configurator .prodLinks input[type=submit]{
+    background: url("http://www.nueratrailerparts.com/images/Website/addToCartBG.gif") no-repeat scroll 0 bottom #606A71;
+    color: white;
+    cursor: pointer;
+    display: block;
+    font-size: 16px;
+    height: 38px;
+    margin-top: 7px;
+    padding-bottom: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 132px;
+}
+
+#configurator .prodLinks input[type=submit]:hover{
+    background: none repeat scroll 0 0 #f3901e;
+}
+
+#configurator .prodLinks a{
+    vertical-align: top;
+    color: #515050;
+    text-decoration: none;
+    margin-right: 5px;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+#configurator .prodLinks a img{
+    vertical-align: bottom;
+    text-decoration: none;
+    cursor:pointer;
+}
+
+#configurator .prodLinks a img:hover{
+    vertical-align: bottom;
+    text-decoration: none;
+    background-color:pink;
+    cursor:pointer;
+}
+
+#configurator .prodLinks a span:hover{
+    text-decoration: underline;
+}
+
+#configurator #hitchResults ul.tabs{
+    list-style:none;
+    padding: 0;
+    margin:0;
+}
+
+#configurator #hitchResults ul.tabs li{
+    display:inline-block;
+    min-width: 100px;
+    margin-top:10px;
+    padding: 0px 5px;
+    margin-left:0px;
+    height: 30px;
+    line-height: 30px;
+    text-align:center;
+    width: auto;
+}
+
+#configurator #hitchResults ul.tabs li:first-child{
+    margin-left: 5px;
+}
+
+#configurator #hitchResults ul.tabs li a{
+    color: #000000;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight:bold;
+    display: inline-block;
+    height: 29px;
+    width: 100%;
+    background: #C6C8BD;
+    padding-left:2px;
+    padding-right:2px;
+}
+
+#configurator #hitchResults ul.tabs li a.active,#configurator #hitchResults ul.tabs li a:hover{
+    background: #F3901E;   
+    color: #ffffff;
+    height: 29px;
+    padding-left:2px;
+    padding-right:2px;
+}
+
+#configurator #resultBox{
+    height: 40px; 
+    background: #606A71 url(http://www.nueratrailerparts.com/images/Website/navBarBG.gif) repeat-x;
+    padding-top: 0px;
+    padding-bottom:10px;
+    padding-left:5px;
+    min-height: 60px;
+    max-height: 150px;
+    color:#eeeeee;
+}
+
+#configurator .trademark{
+    vertical-align: top;
+    line-height: 1.5em;
+    color: #e44f31;
+}
+
+#configurator .button{
+    background: #999;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#999), to(#ccc));
+    background: -moz-linear-gradient(top, #999, #ccc);
+    
+    padding: 5px;
+    border: 1px solid #white;
+    border-radius: 10px 10px;
+    -moz-border-radius: 10px 10px;
+    -o-border-radius: 10px 10px;
+    color: white;
+}
+
+#configurator .button:hover{
+    text-decoration: underline;
+}
+
+#configurator .button_outer{
+    border: 1px solid #999;
+    border-radius: 10px 10px;
+    -moz-border-radius: 10px 10px;
+    -o-border-radius: 10px 10px;
+    margin: 5px 0px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#configurator .buynow{
+    width: 40%;
+}
+
+#configurator .more{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 12pt;
+}
+
+#configurator .more:hover{
+    text-decoration: underline;
+}
+#configurator .hitchTabs{
+    margin-top: 20px;
+}
+
+#configurator .hitchTab{
+    color:white;
+    width: 100px;
+    display: inline-block;
+    text-align:center;
+    height: 30px;
+    background: #999999;
+    padding-left:30px;
+    padding-right:30px;
+    margin-right: 5px;
+    margin-bottom:5px;
+    vertical-align: bottom;
+}
+
+#configurator .activeHitchTab{
+    background: #ccc;
+    color:white;
+    margin-bottom:0px;
+    height: 40px;
+    -webkit-transition: height 0.3s ease-in;
+    -o-transition: height 0.3s ease-in;
+    -moz-transition: height 0.3s ease-in;
+    transition: height 0.3s ease-in;
+}
+
+
+
+#configurator .hitchTab a{
+    vertical-align: middle;
+    font-size: 13pt;
+    text-decoration: none;
+    line-height: 25px;
+    color:white;
+}
+#configurator .activeHitchTab a{
+    color:black;
+    line-height: 30px !important;
+    -webkit-transition: line-height 0.3s ease-in;
+    -o-transition: line-height 0.3s ease-in;
+    -moz-transition: line-height 0.3s ease-in;
+    transition: line-height 0.3s ease-in;
+}
+
+#configurator .hitchTab_container{
+    max-height: 400px;
+    width: 100%;
+    background-color:#cccccc;
+    color:#5B6268;
+    
+}
+
+#configurator .hitchTab_container .wiringTab_content, .hitchTab_container .accTab_content, .hitchTab_container .imageTab_content{
+    display: none;
+    overflow: auto;
+    max-height: 400px;
+}
+
+#configurator .hitchTab_container .imageTab_content{
+    display: block;
+    padding-left: 15px;
+    text-align:center;
+}
+
+#configurator .hitchTab_container .imageTab_content img{
+    width: 20%;
+    -webkit-box-shadow: 0 0 3px #5B6268;
+    margin: 10px;
+    cursor: pointer;
+}
+
+/******* Styling for the pop-up with hitch specific details ****/
+
+#configurator .connector{
+    border-bottom: 1px solid #343434;
+}
+
+
+#configurator .accessory{
+    width: 100%;
+    border-bottom: 2px solid #343434;
+    clear:right;
+}
+
+#configurator .accessory .imgContainer{
+    float:left;
+    width: 35%;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size:22px;
+}
+
+#configurator .accessory .imgContainer .imgBorder{
+    border: 2px solid #343434;
+    border-radius: 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px;
+    -o-border-radius: 5px 5px 5px;
+    
+    box-shadow: #999 2px 2px 2px;
+    -webkit-box-shadow: #999 2px 2px 2px;
+    -moz-box-shadow: #999 2px 2px 2px;
+    -o-box-shadow: #999 2px 2px 2px;
+    
+    height: 125px;
+    width: 80%;
+    padding: 5px;
+    overflow:hidden;
+    vertical-align: middle;
+    text-align: center;
+    background: white;
+    margin:auto;
+}
+
+#configurator .accessory .imgContainer .imgBorder img{
+    max-height: 125px;
+}
+
+#configurator .accessory .imgContainer .qtyBox, .wiringContainer .qtyBox{
+    width: 15px;
+    border: 1px solid #343434;
+    border-radius: 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px;
+    -o-border-radius: 3px 3px 3px;
+    height: 15px;
+    padding: 2px;
+    margin-top: 3px;
+    vertical-align: top;
+}
+
+#configurator .accessory .imgContainer .accPrice, .wiringContainer .accPrice{
+    margin-top: 15px;
+    margin-left: 5px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+
+#configurator .accessory .specs{
+    float: right;
+    padding-left: 35px;
+    width: 50%;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    background: #eeeeee;
+}
+
+#configurator .accessory .specs .details{
+    width: 100%;
+    font-size: 11pt;
+    float:left;
+}
+
+#configurator .accessory .specs .details ul{
+    padding-left: 0px;
+    width: 45%;
+    max-height: 150px;
+    float:left;
+}
+
+#configurator .accessory .specs .buy{
+    width: 40%;
+    float:left;
+}
+
+#configurator .price{
+    font-size: 22px;
+    color: #F3901E;
+    margin-right: 10px;
+    line-height: 25px;
+    vertical-align: top;
+}
+
+#configurator .price span{
+    color: black;
+    margin-right: 5px;
+}
+
+#configurator form label{
+    font-weight: bold;
+    line-height: 25px;
+}
+
+
+/****** AMENDED CHANGES *********/
+#configurator #widget_tab_container .widget_tab_content{
+    display: none;
+}
+
+#configurator #widget_tab_container{
+    border: 2px solid #eeeeee;
+
+}
