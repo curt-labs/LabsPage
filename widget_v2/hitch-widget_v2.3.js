@@ -490,7 +490,7 @@ function loadConfigurator(){
 
 		// Now that everything is loaded, we can make the request to the CURT API to track the deployment
 		var deplyed_location = window.location.hostname;
-		jQuery.get('https://api.curtmfg.com/v2/AddDeployment?url='+deplyed_location,'jsonp');
+		jQuery.get('https://api.curtmfg.com/v2/AddDeployment?url='+deplyed_location,function(){},'jsonp');
 	}
 }
 
@@ -740,19 +740,13 @@ function displayPart(part){
 	partHTML += "<img src='https://labs.curtmfg.com/widget_v2/img/file_pdf.png' />";
 
 	if(part.pClass == "Wiring"){
-		partHTML += "<a target='_blank' href='https://www.curtmfg.com/masterlibrary/"+part.partID+"/installsheet/"+part.partID+"_INS.pdf'>";
+		partHTML += "<a target='_blank' href='https://www.curtmfg.com/masterlibrary/"+part.partID+"/installsheet/CME_"+part.partID+"_INS.pdf'>";
 	}else{
-		partHTML += "<a target='_blank' href='https://www.curtmfg.com/masterlibrary/"+part.partID+"/installsheet/"+part.partID+"_INS.pdf'>";
+		partHTML += "<a target='_blank' href='https://www.curtmfg.com/masterlibrary/"+part.partID+"/installsheet/CM_"+part.partID+"_INS.pdf'>";
 	}
 
-	jQuery.each(part.content,function(i, content_item){
-		if(content_item.key == 'installationSheet'){
-			partHTML += "<a target='_blank' href='"+content_item.value+"'>";
-			partHTML += "Instruction Sheet "+part.partID;
-			partHTML += "</a>";
-		}
-	});
-
+	partHTML += "Instruction Sheet "+part.partID;
+	partHTML += "</a>";
 	if(part.attributes.length > 0){
 		partHTML += "<table class='attribute_table'>";
 		var attr_keys = [];
@@ -970,6 +964,18 @@ function shopifySubmit(e) { //eslint-disable-line no-unused-vars
 function loadCheckout(price,title, custPartID, partID){
 	var checkoutHTML = '';
 	switch(checkout){
+		case 'priceonly':
+			if(merchant_id > 0){
+				checkoutHTML += '<span class="price">'+price+'</span><br />';
+				checkoutHTML += '<div class="product">';
+				checkoutHTML += '<input type="hidden" class="product-title" value="'+title.replace('""',' inch').replace('"','')+'">';
+				checkoutHTML += '<input type="hidden" class="product-price" value="'+price+'">';
+				checkoutHTML += '<div class="googlecart-add-button" tabindex="0" role="button" title="Add to cart"></div>';
+				checkoutHTML += '</div>';
+			}
+			break;
+
+
 		case 'google':
 			if(merchant_id > 0){
 				checkoutHTML += '<span class="price">'+price+'</span><br />';
